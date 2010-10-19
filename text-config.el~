@@ -1,0 +1,2 @@
+;; Turn on longlines-mode
+(add-hook 'text-mode-hook 'longlines-mode)
