@@ -16,5 +16,9 @@
 (fset 'col-to-latex-row
    "\336 &\C-n\C-e")
 
+;; Copy the whole buffer to the clipboard
+(fset 'copy-buffer
+   [?\M-x ?m ?a ?r ?k ?- ?w ?h tab return ?\M-w])
+
 ;; Own keybindings
 (global-set-key "\C-xl" 'goto-line)

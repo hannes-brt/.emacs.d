@@ -32,6 +32,9 @@
 ;; Other modes
 (load-library "other-config.el")
 
+;; Own macros
+(load-library "macros-keybindings.el")
+
 ;;; This was installed by package-install.el.
 ;;; This provides support for the package system and
 ;;; interfacing with ELPA, the package archive.
