@@ -5,7 +5,7 @@
 (add-to-list 'interpreter-mode-alist '("python" . python-mode))
 
 ;; Ipython
-(setq ipython-command "/Library/Frameworks/Python.framework/Versions/6.2/bin/ipython")
+(setq ipython-command "/usr/python6.3/bin/ipython")
 (require 'ipython)
 (setq ipython-completion-command-string "print(';'.join(__IP.Completer.all_completions('%s')))\n")
 
@@ -68,16 +68,16 @@
 (global-set-key [f11] 'flymake-goto-next-error)
 
 ;; pymacs
-(autoload 'pymacs-apply "pymacs")
-(autoload 'pymacs-call "pymacs")
-(autoload 'pymacs-eval "pymacs" nil t)
-(autoload 'pymacs-exec "pymacs" nil t)
-(autoload 'pymacs-load "pymacs" nil t)
-(eval-after-load "pymacs"
-  '(add-to-list 'pymacs-load-path "~/site-packages/"))
-(pymacs-load "ropemacs" "rope-")
-(setq ropemacs-enable-autoimport t)
+;; (autoload 'pymacs-apply "pymacs")
+;; (autoload 'pymacs-call "pymacs")
+;; (autoload 'pymacs-eval "pymacs" nil t)
+;; (autoload 'pymacs-exec "pymacs" nil t)
+;; (autoload 'pymacs-load "pymacs" nil t)
+;; (eval-after-load "pymacs"
+;;   '(add-to-list 'pymacs-load-path "~/site-packages/"))
+;; (pymacs-load "ropemacs" "rope-")
+;; (setq ropemacs-enable-autoimport t)
 
-(require 'pycomplete)
+;; (require 'pycomplete)
 
 
