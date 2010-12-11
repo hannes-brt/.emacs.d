@@ -21,6 +21,6 @@
     (delete-region start end)
     (insert hex-string)))
 
-
-  
-  
+;; Textmate-mode
+(require 'textmate)
+(textmate-mode)
