@@ -1,2 +1,3 @@
 ;; Git
-(require 'git-emacs)
+;; (require 'git-emacs)
+(require 'magit)
