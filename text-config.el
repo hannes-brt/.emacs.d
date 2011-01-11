@@ -17,6 +17,11 @@
 		    hex-string
 		    ")"))))
 
+;; Turn Sitmo-equation into Markdown/LaTeX code
+(fset 'sitmo-to-md
+   [?\C-  ?\C-s ?e ?q ?= ?\C-m ?\M-x ?d ?e ?l ?e ?t ?e ?- ?r ?e ?g ?i ?o ?n return ?\C-e backspace ?\C-a ?\C-  ?\C-e ?\M-x ?u ?n ?h ?e ?x ?i ?f tab return ?\C-a ?\\ ?[ ?  ?\C-e ?  ?\\ ?]])
+
+
 ;; Unfill paragraph and region
 (defun unfill-paragraph ()
   "Replace newline chars in current paragraph by single spaces.

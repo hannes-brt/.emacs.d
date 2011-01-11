@@ -21,3 +21,7 @@
   (if dollar (insert "$"))
   (insert "\\bs{" (char-to-string char) "}")
   (if dollar (insert "$")))
+
+;; Find my bibliography
+(setq reftex-bibpath-environment-variables
+      '("$HOME/Library/texmf/tex/latex/bibliography/"))
