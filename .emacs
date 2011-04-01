@@ -52,6 +52,7 @@
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
  '(LaTeX-float "htbp")
+ '(LaTeX-math-list (quote (("1 b" LaTeX-math-bs "Bold symbol" nil))))
  '(TeX-PDF-mode t)
  '(TeX-electric-sub-and-superscript t)
  '(c-default-style (quote ((c-mode . "k&r") (java-mode . "java") (awk-mode . "awk") (other . "gnu"))))
@@ -62,6 +63,7 @@
  '(latin1-display t nil (latin1-disp))
  '(mac-emulate-three-button-mouse t)
  '(reftex-bibpath-environment-variables (quote ("BIBINPUTS" "TEXBIB")))
+ '(reftex-default-bibliography (quote ("~/Library/texmf/tex/latex/bibliography/hannes_bib.bib")))
  '(reftex-label-alist (quote (("algorithm" 97 "alg:" "Algorithm~\\ref{%s}" nil ("algorithm" "alg.") -3))))
  '(safe-local-variable-values (quote ((TeX-master . \.\./cv-tufte\.tex) (TeX-master . \.\./\.\./cv-tufte))))
  '(show-paren-mode t)

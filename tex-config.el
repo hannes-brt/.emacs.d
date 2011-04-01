@@ -25,3 +25,7 @@
 ;; Find my bibliography
 (setq reftex-bibpath-environment-variables
       '("$HOME/Library/texmf/tex/latex/bibliography/"))
+
+;; Support for makefile
+(eval-after-load "tex"
+  '(add-to-list 'TeX-command-list '("Make" "make" TeX-run-command nil t)))

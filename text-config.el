@@ -1,5 +1,5 @@
 ;; Turn on longlines-mode
-(add-hook 'text-mode-hook 'longlines-mode)
+;; (add-hook 'text-mode-hook 'longlines-mode)
 
 ;; Turn on markdown-mode
 (autoload 'markdown-mode "markdown-mode.el"
