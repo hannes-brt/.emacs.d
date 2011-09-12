@@ -22,3 +22,4 @@
 
 ;; Own keybindings
 (global-set-key "\C-xl" 'goto-line)
+(global-set-key "\C-c\C-r" 'revert-buffer)

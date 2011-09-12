@@ -64,7 +64,7 @@
  '(mac-emulate-three-button-mouse t)
  '(reftex-bibpath-environment-variables (quote ("BIBINPUTS" "TEXBIB")))
  '(reftex-default-bibliography (quote ("~/Library/texmf/tex/latex/bibliography/hannes_bib.bib")))
- '(reftex-label-alist (quote (("algorithm" 97 "alg:" "Algorithm~\\ref{%s}" nil ("algorithm" "alg.") -3))))
+ '(reftex-label-alist (quote ((nil 102 nil "~\\cref{%s}" nil nil) (nil 116 nil "~\\cref{%s}" nil nil) (nil 115 nil "~\\cref{%s}" nil nil) (nil 101 nil "~\\cref{%s}" nil nil) ("algorithm" 97 nil "~\\cref{%s}" nil nil))))
  '(safe-local-variable-values (quote ((TeX-master . \.\./cv-tufte\.tex) (TeX-master . \.\./\.\./cv-tufte))))
  '(show-paren-mode t)
  '(tex-default-mode (quote latex-mode))

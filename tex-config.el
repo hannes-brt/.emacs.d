@@ -8,11 +8,12 @@
 (add-hook 'LaTeX-mode-hook 'turn-on-reftex)
 (add-hook 'LaTeX-mode-hook 'turn-on-auto-fill)
 (add-hook 'LaTeX-mode-hook 'LaTeX-math-mode)
+(add-hook 'bibtex-mode-hook 'turn-on-auto-revert-mode)
 (setq reftex-plug-into-auctex t)
 (setq reftex-label-alist
-      `((nil ?f nil "Figure~\ref{%s}" nil nil)
-	(nil ?t nil "Table~\ref{%s}" nil nil)
-	(nil ?s nil "Section~\ref{%s}" nil nil)))
+      `((nil ?f nil "~\\cref{%s}" nil nil)
+	(nil ?t nil "~\\cref{%s}" nil nil)
+	(nil ?s nil "~\\cref{%s}" nil nil)))
 
 
 (defun LaTeX-math-bs (char dollar)

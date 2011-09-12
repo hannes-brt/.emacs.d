@@ -30,3 +30,7 @@
 (add-to-list 'auto-mode-alist '("\\.pde$" . processing-mode))
 (setq processing-location "/System/Library/Java/JavaVirtualMachines/2.10/Resources")
 
+;; Hack to enable Textexpander
+(setq ns-alternate-modifier 'alt)
+(define-key global-map [(alt ?v)] 'scroll-down)
+(define-key global-map [(meta ?v)] 'yank)
