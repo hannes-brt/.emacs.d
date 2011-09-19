@@ -7,6 +7,8 @@
 
 (pymacs-load "pycomplete")
 
+(defconst pycomplete-version "$Revision: 100 $"
+  "`pycomplete' version number.")
 
 (defconst py-identifier 
   "[A-Za-z_][A-Za-z_0-9]*"
@@ -58,6 +60,11 @@
   "Regular expression matching imports.")
 
 
+;; for compatibility with python-mode 4.78
+(unless (fboundp 'py-backslash-continuation-line-p)
+  (defalias 'py-backslash-continuation-line-p 'py-backslash-continuation-preceding-line-p))
+
+
 (defun blank-linep ()
   "check if current line is empty (only whitespaces and comments)"
   (save-excursion
@@ -70,6 +77,13 @@
   (save-excursion
     (forward-char -1)
     (looking-at "[\n\t\r]")))
+
+
+(defun pycomplete-version ()
+  "Echo the current version of `pycomplete' in the minibuffer."
+  (interactive)
+  (message "Using `pycomplete' version %s" pycomplete-version)
+  (py-keep-region-active))
 
 
 (defun py-complete ()
@@ -137,7 +151,7 @@
   "get help on a python expression"
   (interactive "sHelp: ")
   (let ((help-string 
-         (pycomplete-pyhelp string (py-find-global-imports))))
+         (pycomplete-pyhelp string (buffer-file-name) (py-find-global-imports))))
     (if (and help-string (> (length help-string) 300))
         (with-output-to-temp-buffer "*Python Help*"
           (print help-string))
@@ -157,7 +171,7 @@
 (defun py-complete-signature (function)
   "get signature of a python function or method"
   (set 'py-complete-current-signature
-       (pycomplete-pysignature function)))
+       (pycomplete-pysignature function (buffer-file-name))))
 
 
 (defun py-complete-signature-show nil

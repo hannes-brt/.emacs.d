@@ -5,7 +5,7 @@
 
 ;; Fullscreen
 (setq initial-frame-alist '((top . 20) (left .30) ;Make window bigger
-			    (width . 200) (height . 53)))
+			    (width . 205) (height 55 )))
 
 ;; Modify mouse scrolling
 (require 'smooth-scrolling) 		;Enable smooth scrolling

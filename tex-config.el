@@ -1,5 +1,9 @@
 ;; Configuration for LaTeX
 
+;; Make sure the texlive distribution is found
+(setenv "PATH" (concat "/usr/local/texlive/2011/bin/x86_64-linux:"
+		       (getenv "PATH")))
+
 ;; TeX-mode options
 (setq-default TeX-master nil) ; Query for master file.
 (setq TeX-auto-save t)

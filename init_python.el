@@ -73,7 +73,7 @@
           (lambda ()
                  (auto-complete-mode 1)
                  (set (make-local-variable 'ac-sources)
-                      (append ac-sources '(ac-source-rope) '(ac-source-yasnippet)))
+                      (append ac-sources '(ac-source-rope)))
                  (set (make-local-variable 'ac-find-function) 'ac-python-find)
                  (set (make-local-variable 'ac-candidate-function) 'ac-python-candidate)
                  (set (make-local-variable 'ac-auto-start) nil)))
@@ -106,4 +106,5 @@
   (add-to-list 'flymake-allowed-file-name-masks
 	       '("\\.py\\'" flymake-pyflakes-init)))
 (add-hook 'find-file-hook 'flymake-find-file-hook)
+
 (provide 'init_python)
